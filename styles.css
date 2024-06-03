@@ -1,0 +1,120 @@
+body {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #1a1a1a;
+    color: #eaeaea;
+}
+
+header {
+    background: #121212;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom: 1px solid #333;
+    position: relative;
+    overflow: hidden;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #00ff99;
+    text-shadow: 0 0 5px #00ff99, 0 0 10px #00ff99, 0 0 15px #00ff99;
+    cursor: pointer;
+}
+
+header h2 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #ff0099;
+    text-shadow: 0 0 5px #ff0099, 0 0 10px #ff0099, 0 0 15px #ff0099;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    background: #2a2a2a;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 2rem;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.profile-picture {
+    max-width: 300px;  /* Erhöht auf die doppelte Größe */
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px;
+    border: 3px solid #00ff99;
+}
+
+.about p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #b3b3b3;
+}
+
+.projects h3, .contact h3 {
+    text-align: center;
+    color: #00ff99;
+    font-size: 1.8rem;
+    text-shadow: 0 0 5px #00ff99, 0 0 10px #00ff99, 0 0 15px #00ff99;
+}
+
+.projects ul, .contact ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.projects ul li, .contact ul li {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    color: #b3b3b3;
+}
+
+.projects a, .contact a {
+    color: #00ff99;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.projects a:hover, .contact a:hover {
+    text-decoration: underline;
+}
+
+#laser-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.laser {
+    position: absolute;
+    width: 2px;
+    height: 50px;
+    background: #00ff99;
+    box-shadow: 0 0 5px #00ff99, 0 0 10px #00ff99, 0 0 20px #00ff99;
+    animation: laser 0.5s linear infinite;
+}
+
+@keyframes laser {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--x), var(--y));
+        opacity: 0;
+    }
+}
